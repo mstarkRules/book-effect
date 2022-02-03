@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: #90ee90; */
+  font-family: "Quicksand", sans-serif;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* width: 50vh; */
+  /* height: calc(100vh - 100px); */
+
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    0 20px 100px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 20px 100px
+    rgba(0, 0, 0, 0.5);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  /* left: 5px; */
+  width: 100%;
+  height: 5px;
+  background: #475b02;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  height: 100%;
+  width: 5px;
+  background: #7ea301;
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 1s;
+}
+
+.imgbox-img {
+  width: 40rem;
+}
+
+.card:hover .imgbox {
+  transform: rotateY(-135deg);
+  /* background-color: blue; */
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: -1;
+  /* background-color: blue; */
+  height: 100%;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 1s;
+
+  background: #fff;
+
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    0 20px 100px rgba(0, 0, 0, 0.5);
+}
+
+.details:hover {
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 20px 100px
+    rgba(0, 0, 0, 0.5);
+}
+
+.details:hover {
+  transform: rotateY(-132deg);
+  transition: 1s;
+  transform-origin: left;
+  /* background-color: blue; */
+}
+
+.card .third {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  /* padding: 20px; */
+  z-index: -2;
+  width: 100%;
+  background-size: contain;
+}
